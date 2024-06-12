@@ -25,7 +25,7 @@
         networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
 # Set your time zone.
-        time.timeZone = "America/Chicago";
+        time.timeZone = "America/NewYork";
 
 # Configure network proxy if necessary
 # networking.proxy.default = "http://user:password@proxy:port/";
@@ -54,9 +54,9 @@
 # Allow Unfree packages
     nixpkgs.config.allowUnfree = true;
     nixpkgs.config.allowInsecure = true;
-    nixpkgs.config.PermittedInsecurePackages = [
-	  "python-2.7.18.6"
-    ];
+#    nixpkgs.config.PermittedInsecurePackages = [
+#	  "python-2.7.18.6"
+#   ];
 
     programs.hyprland = {
         enable = true;
@@ -104,7 +104,7 @@
     services.xserver.libinput.enable = true;
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.jake = {
+    users.users.jpacheco = {
         isNormalUser = true;
         extraGroups = [ "networkmanager" "wheel" "video" "kvm" ]; # Enable ‘sudo’ for the user.
             packages = with pkgs; [
