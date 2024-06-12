@@ -25,7 +25,7 @@
         networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
 # Set your time zone.
-        time.timeZone = "America/NewYork";
+        time.timeZone = "America/New_York";
 
 # Configure network proxy if necessary
 # networking.proxy.default = "http://user:password@proxy:port/";
@@ -54,17 +54,14 @@
 # Allow Unfree packages
     nixpkgs.config.allowUnfree = true;
     nixpkgs.config.allowInsecure = true;
-#    nixpkgs.config.PermittedInsecurePackages = [
-#	  "python-2.7.18.6"
-#   ];
+    nixpkgs.config.PermittedInsecurePackages = [
+	  "python-2.7.18.6"
+  ];
 
     programs.hyprland = {
         enable = true;
-    };
+        xwayland.enable = true;
 
-    programs.hyprland.xwayland = {
-        hidpi = true;
-        enable = true;
     };
 
 
